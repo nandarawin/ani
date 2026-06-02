@@ -30,7 +30,6 @@
     padding: 40px 20px 80px;
   }
 
-  /* Grain overlay */
   body::before {
     content: '';
     position: fixed;
@@ -41,12 +40,9 @@
     opacity: 0.5;
   }
 
-  .book {
-    max-width: 860px;
-    margin: 0 auto;
-  }
+  .book { max-width: 860px; margin: 0 auto; }
 
-  /* ── COVER ── */
+  /* COVER */
   .cover {
     background: var(--cream);
     border-radius: 4px;
@@ -98,7 +94,7 @@
     margin-top: 24px;
   }
 
-  /* ── POLAROID ── */
+  /* POLAROID */
   .polaroid {
     background: white;
     padding: 14px 14px 44px;
@@ -131,17 +127,12 @@
     left: 0; right: 0;
   }
 
-  /* ── TAPE ── */
-  .tape {
-    position: absolute;
-    background: var(--tape);
-    border-radius: 2px;
-    z-index: 2;
-  }
+  /* TAPE */
+  .tape { position: absolute; background: var(--tape); border-radius: 2px; z-index: 2; }
   .tape.h { width: 60px; height: 22px; }
   .tape.v { width: 22px; height: 60px; }
 
-  /* ── PAGE ── */
+  /* PAGE */
   .page {
     background: var(--cream);
     border-radius: 4px;
@@ -162,9 +153,7 @@
     background: rgba(200, 150, 130, 0.3);
   }
 
-  .page-content {
-    padding-left: 30px;
-  }
+  .page-content { padding-left: 30px; }
 
   .page-label {
     font-family: 'Caveat', cursive;
@@ -183,7 +172,7 @@
     font-style: italic;
   }
 
-  /* ── LETTER ── */
+  /* LETTER */
   .letter-body {
     font-family: 'Caveat', cursive;
     font-size: 1.35rem;
@@ -202,7 +191,7 @@
     margin-top: 30px;
   }
 
-  /* ── TIMELINE ── */
+  /* TIMELINE */
   .timeline {
     position: relative;
     padding-left: 28px;
@@ -258,7 +247,7 @@
     line-height: 1.6;
   }
 
-  /* ── PHOTOS GRID ── */
+  /* PHOTOS GRID */
   .photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -275,7 +264,6 @@
   }
 
   .photo-card:hover { transform: scale(1.03) rotate(0deg) !important; }
-
   .photo-card:nth-child(1) { transform: rotate(-2.5deg); }
   .photo-card:nth-child(2) { transform: rotate(1.5deg); margin-top: 12px; }
   .photo-card:nth-child(3) { transform: rotate(-1deg); margin-top: -6px; }
@@ -338,7 +326,7 @@
 
   .photo-caption-input::placeholder { color: var(--blush); }
 
-  /* ── STICKY NOTE ── */
+  /* STICKY NOTE */
   .sticky {
     background: #fff8c5;
     padding: 20px 22px;
@@ -354,7 +342,7 @@
     right: 40px;
   }
 
-  /* ── TRIPS ── */
+  /* TRIPS */
   .trips-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -372,14 +360,9 @@
   }
 
   .trip-card:hover { transform: translateY(-3px); }
-
   .trip-card:nth-child(odd) { border-left-color: var(--rose); }
 
-  .trip-emoji {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-    display: block;
-  }
+  .trip-emoji { font-size: 1.8rem; margin-bottom: 8px; display: block; }
 
   .trip-place {
     font-family: 'Playfair Display', serif;
@@ -427,7 +410,7 @@
     background: rgba(201,125,110,0.05);
   }
 
-  /* ── PHOTOBOOTH ── */
+  /* PHOTOBOOTH */
   .photobooth-page { background: var(--cream); }
 
   .strips-gallery {
@@ -438,6 +421,7 @@
     justify-content: center;
   }
 
+  /* Each strip is ONE tall slot — the photostrip image already has 4 poses */
   .strip {
     background: white;
     padding: 10px 10px 14px;
@@ -456,9 +440,10 @@
   .strips-gallery .strip:nth-child(4) { transform: rotate(2deg); margin-top: -6px; }
   .strips-gallery .strip:nth-child(5) { transform: rotate(-1.5deg); margin-top: 14px; }
 
+  /* Single tall slot — fits the whole strip image */
   .strip-slot {
-    width: 120px;
-    height: 100px;
+    width: 140px;
+    height: 400px;
     background: linear-gradient(135deg, var(--warm), var(--blush));
     display: flex;
     flex-direction: column;
@@ -481,10 +466,10 @@
 
   .strip-slot .slot-hint {
     font-family: 'Caveat', cursive;
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     color: var(--rose);
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.8;
     pointer-events: none;
   }
 
@@ -522,8 +507,8 @@
   }
 
   .add-strip-btn {
-    width: 120px;
-    min-height: 240px;
+    width: 140px;
+    min-height: 400px;
     background: transparent;
     border: 2px dashed var(--blush);
     display: flex;
@@ -545,7 +530,7 @@
     background: rgba(201,125,110,0.04);
   }
 
-  /* ── CLOSING ── */
+  /* CLOSING */
   .closing {
     text-align: center;
     padding: 50px 30px;
@@ -573,7 +558,7 @@
     color: var(--brown);
   }
 
-  /* ── EDIT HINT ── */
+  /* EDIT HINT */
   .edit-hint {
     text-align: center;
     font-family: 'Caveat', cursive;
@@ -590,7 +575,7 @@
     background: rgba(255,255,255,0.4);
   }
 
-  /* ── ANIMATIONS ── */
+  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -606,7 +591,6 @@
   .page:nth-child(4) { animation-delay: 0.3s; }
   .page:nth-child(5) { animation-delay: 0.4s; }
 
-  /* Responsive */
   @media (max-width: 600px) {
     .page { padding: 32px 20px; }
     .page-content { padding-left: 10px; }
@@ -697,9 +681,7 @@
       <p class="page-label">Us, captured</p>
       <h2>Our Photos</h2>
       <p style="font-family:'Caveat',cursive; color:var(--rose); margin-bottom:20px; font-size:1.1rem;">Click a frame to add your own photos 📷</p>
-      <div class="photo-grid" id="photoGrid">
-        <!-- Cards generated by JS -->
-      </div>
+      <div class="photo-grid" id="photoGrid"></div>
     </div>
   </div>
 
@@ -750,9 +732,8 @@
     <div class="page-content">
       <p class="page-label">Just the two of us</p>
       <h2>Our Photobooth Strips 🎞️</h2>
-      <p style="font-family:'Caveat',cursive; color:var(--rose); margin-bottom:28px; font-size:1.1rem;">Click any frame to upload your photos — each strip holds 4 pics 📸</p>
-      <div class="strips-gallery" id="stripsGallery">
-      </div>
+      <p style="font-family:'Caveat',cursive; color:var(--rose); margin-bottom:28px; font-size:1.1rem;">Click each strip to upload your photostrip image — 1 image per strip 🎞️</p>
+      <div class="strips-gallery" id="stripsGallery"></div>
     </div>
   </div>
 
@@ -766,7 +747,7 @@
 </div>
 
 <script>
-  // Generate photo cards
+  // Photo captions
   const captions = [
     "our first photo together 🌸",
     "that one perfect day ☀️",
@@ -776,7 +757,7 @@
     "add a caption ✏️"
   ];
 
-  // Photobooth gallery — build strips
+  // Washi tape colours per strip
   const tapeColors = [
     'rgba(201,125,110,0.3)',
     'rgba(122,63,58,0.2)',
@@ -785,46 +766,52 @@
     'rgba(201,125,110,0.2)',
   ];
 
+  // Build photobooth — each strip = 1 tall slot for the full strip image
   function makeStrip(gallery, index) {
     const strip = document.createElement('div');
     strip.className = 'strip';
 
+    // Washi tape on top
     const tape = document.createElement('div');
     tape.className = 'washi-tape';
     tape.style.background = tapeColors[index % tapeColors.length];
     strip.appendChild(tape);
 
-    for (let i = 0; i < 4; i++) {
-      const slot = document.createElement('div');
-      slot.className = 'strip-slot';
+    // ONE slot — the full photostrip image (already 4 poses together)
+    const slot = document.createElement('div');
+    slot.className = 'strip-slot';
 
-      const img = document.createElement('img');
-      const hint = document.createElement('div');
-      hint.className = 'slot-hint';
-      hint.innerHTML = '📸<br>add photo';
-      const fileInput = document.createElement('input');
-      fileInput.type = 'file';
-      fileInput.accept = 'image/*';
-      fileInput.addEventListener('change', function() {
-        const file = this.files[0];
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          img.src = e.target.result;
-          img.style.display = 'block';
-          hint.style.display = 'none';
-          this.style.display = 'none';
-        };
-        reader.readAsDataURL(file);
-      });
+    const img = document.createElement('img');
 
-      slot.addEventListener('click', () => fileInput.click());
-      slot.appendChild(img);
-      slot.appendChild(hint);
-      slot.appendChild(fileInput);
-      strip.appendChild(slot);
-    }
+    const hint = document.createElement('div');
+    hint.className = 'slot-hint';
+    hint.innerHTML = '🎞️<br>click to upload<br>your strip';
 
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/*';
+    fileInput.addEventListener('change', function() {
+      const file = this.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        img.src = e.target.result;
+        img.style.display = 'block';
+        hint.style.display = 'none';
+        this.style.pointerEvents = 'none';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Click to re-upload even after filled
+    slot.addEventListener('click', () => fileInput.click());
+
+    slot.appendChild(img);
+    slot.appendChild(hint);
+    slot.appendChild(fileInput);
+    strip.appendChild(slot);
+
+    // Date / place label
     const dateInput = document.createElement('input');
     dateInput.className = 'strip-date';
     dateInput.type = 'text';
@@ -836,11 +823,8 @@
 
   function buildBoothGallery() {
     const gallery = document.getElementById('stripsGallery');
-
-    // Add 5 strips
     for (let i = 0; i < 5; i++) makeStrip(gallery, i);
 
-    // Add strip button
     const addBtn = document.createElement('button');
     addBtn.className = 'add-strip-btn';
     addBtn.innerHTML = '＋<br>add strip';
@@ -850,7 +834,7 @@
 
   buildBoothGallery();
 
-  // Add trip card
+  // Add trip
   function addTrip() {
     const tripsGrid = document.getElementById('tripsGrid');
     const btn = tripsGrid.querySelector('.add-trip-btn');
@@ -865,9 +849,9 @@
     tripsGrid.insertBefore(card, btn);
   }
 
+  // Photo grid
   const grid = document.getElementById('photoGrid');
-
-  captions.forEach((cap, i) => {
+  captions.forEach((cap) => {
     const card = document.createElement('div');
     card.className = 'photo-card';
 
